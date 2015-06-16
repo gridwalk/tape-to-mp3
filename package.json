@@ -1,0 +1,24 @@
+{
+  "name": "tape_recorder",
+  "version": "1.0.0",
+  "description": "Records from microphone jack and creates a tagged MP3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donald Hanson",
+  "license": "ISC",
+  "dependencies": {
+    "id3-writer": "^1.2.2",
+    "prompt": "^0.2.14"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gridwalk/tape-to-mp3"
+  },
+  "bugs": {
+    "url": "https://github.com/gridwalk/tape-to-mp3/issues"
+  },
+  "homepage": "https://github.com/gridwalk/tape-to-mp3"
+}
