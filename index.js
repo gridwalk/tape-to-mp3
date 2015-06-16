@@ -53,11 +53,11 @@ prompt.get(['artist','title','year'], function (err, result) {
       console.log( "ID3 set" );
 
       // move mp3 to the Tapes folder
-      fs.rename(filename,'../../Audio/Tapes/'+filename,function(err){
-        if (err) { return onErr(err); }
+      // fs.rename(filename,'../../Audio/Tapes/'+filename,function(err){
+      //   if (err) { return onErr(err); }
         console.log('Done!');
 
-      });
+      // });
     });
   });
 });

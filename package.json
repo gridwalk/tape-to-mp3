@@ -1,5 +1,5 @@
 {
-  "name": "tape_recorder",
+  "name": "tape_to_mp3",
   "version": "1.0.0",
   "description": "Records from microphone jack and creates a tagged MP3.",
   "main": "index.js",
