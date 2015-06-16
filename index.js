@@ -8,7 +8,11 @@ prompt.start();
 prompt.get(['artist','title','year'], function (err, result) {
   if (err) { return onErr(err); }
 
-  artist   = result.artist;
+  if( result.artist ){
+    artist = result.artist;
+  }else{
+    artist = "Unknown Artist"
+  }
   
   if( result.year ){
     year = parseInt(result.year);
@@ -26,7 +30,7 @@ prompt.get(['artist','title','year'], function (err, result) {
   
   filename = slug+'.mp3';
 
-  record = spawn('rec',[filename, 'rate', '48000', 'silence', '1', '0.1', '3%', '1', '30.0', '3%']);
+  record = spawn('rec',[filename, 'rate', '48000', 'silence', '1', '0.1', '3%', '1', '130.0', '3%', 'remix','1','1']);
 
   record.stdout.on('data', function (data) {
     console.log('stdout: ' + data);
@@ -54,7 +58,7 @@ prompt.get(['artist','title','year'], function (err, result) {
 
       // move mp3 to the Tapes folder
       // fs.rename(filename,'../../Audio/Tapes/'+filename,function(err){
-      //   if (err) { return onErr(err); }
+        // if (err) { return onErr(err); }
         console.log('Done!');
 
       // });
